@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "content": "Woof!"
         }
     ];
-    const imageItems = image[0];
+    const imageItems = image [0]
     document.getElementById('card-title').innerHTML = imageItems.title;
     document.getElementById('card-image').src = imageItems.image;
     document.getElementById('card-image').alt = imageItems.title; 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
         const commentsList = document.getElementById('comments-list');
-        commentsList.innerHTML = ''; 
+        commentsList.innerHTML = `` ;
         comments.forEach(comment => {
             const li = document.createElement('li');
             li.innerHTML= comment.content;
@@ -52,17 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     // new comment
-    const commentForm = document.getElementById('comment-form');
-    commentForm.addEventListener('submit', function (event) {
-        event.preventDefault();  
-        const commentInput = document.getElementById('comment');
-        if (commentInput.value.trim() !== '') {
-            const li = document.createElement('li');
-            li.innerHTML = commentInput.value;
-            commentsList.appendChild(li);
-            commentInput.value = ''; 
-        }
-    });
+const commentForm = document.getElementById('comment-form');
+commentForm.addEventListener('submit', function (event) {
+    event.preventDefault();  
+    const commentInput = document.getElementById('comment').value;
+    console.log(commentInput);
+});
+        
+    
 });
 
 
